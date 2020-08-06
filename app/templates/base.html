@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<html>
+
+    <head>
+        <title>Quiz Application</title>
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/app.css' %}">
+
+    </head>
+    <body>
+      <div class="page-header">
+       <h1 class="heading"> Sandbox technologies</h1>
+      <a href="{% url 'app:create' %}"><button type="button" class="button">Create</button></a>
+
+      </div>
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
